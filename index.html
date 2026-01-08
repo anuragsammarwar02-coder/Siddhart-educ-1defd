@@ -3,139 +3,215 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Forex Focus - Education Channel</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRYPTO BY SIDDHARTH</title>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #ffffff;
-        text-align: center;
-        padding: 40px 15px;
-        color: #222;
-    }
+/* GLOBAL RESET */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
 
-    /* Logo Glow */
-    .logo {
-        width: 120px;
-        height: 120px;
-        margin: auto;
-        border-radius: 20px;
-        box-shadow: 0 0 25px rgba(0, 255, 150, 0.8),
-                    0 0 45px rgba(0, 150, 255, 0.6);
-        animation: glow 2s infinite alternate;
-    }
+/* WRAPPER */
+.siddharth-wrapper {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #020d02, #001500);
+    color: #ffffff;
+    min-height: 100vh;
+    position: relative;
+}
 
-    @keyframes glow {
-        from { box-shadow: 0 0 15px rgba(0,255,150,.6); }
-        to { box-shadow: 0 0 45px rgba(0,150,255,.9); }
-    }
+/* BACKGROUND */
+.siddharth-bg {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 30% 40%, rgba(34,197,94,.18), transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(16,185,129,.15), transparent 50%);
+    animation: bgMove 12s ease-in-out infinite alternate;
+    z-index: 0;
+}
 
-    h1 {
-        margin-top: 25px;
-        font-size: 26px;
-    }
+@keyframes bgMove {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
 
-    h1 span {
-        color: #007bff;
-    }
+/* CONTAINER */
+.siddharth-container {
+    position: relative;
+    z-index: 2;
+    max-width: 480px;
+    margin: auto;
+    padding: 26px 16px;
+    text-align: center;
+}
 
-    .subtitle {
-        color: #1a8f3c;
-        font-size: 18px;
-        margin: 10px 0;
-    }
+/* HERO */
+.siddharth-hero {
+    margin-bottom: 22px;
+    animation: fadeDown .8s ease;
+}
 
-    .subscribers {
-        font-size: 18px;
-        margin-top: 10px;
-        font-weight: bold;
-    }
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-    .desc {
-        margin-top: 20px;
-        font-size: 15px;
-    }
+/* LOGO */
+.siddharth-logo-box {
+    position: relative;
+    display: inline-block;
+}
 
-    .small {
-        color: #777;
-        font-size: 13px;
-        margin-top: 5px;
-    }
+.siddharth-logo {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #22c55e;
+    animation: pulseGlow 2.8s infinite;
+}
 
-    /* Buttons */
-    .btn {
-        display: block;
-        margin: 15px auto;
-        padding: 16px 35px;
-        font-size: 17px;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 50px;
-        width: 90%;
-        max-width: 350px;
-        background: linear-gradient(45deg, #00c853, #2196f3);
-        box-shadow: 0 0 20px rgba(0, 200, 83, 0.7);
-        animation: pulse 1.5s infinite;
-        transition: transform .2s;
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 18px rgba(34,197,94,.5),
+                    0 0 35px rgba(34,197,94,.4);
+        transform: scale(1);
     }
-
-    .btn.secondary {
-        background: linear-gradient(45deg, #1e88e5, #00c853);
-    }
-
-    .btn.info {
-        background: linear-gradient(45deg, #00acc1, #42a5f5);
-    }
-
-    .btn:hover {
+    50% {
+        box-shadow: 0 0 35px rgba(34,197,94,.9),
+                    0 0 70px rgba(34,197,94,.7);
         transform: scale(1.05);
     }
-
-    @keyframes pulse {
-        0% { box-shadow: 0 0 10px rgba(0,200,83,.6); }
-        50% { box-shadow: 0 0 30px rgba(33,150,243,.9); }
-        100% { box-shadow: 0 0 10px rgba(0,200,83,.6); }
+    100% {
+        box-shadow: 0 0 18px rgba(34,197,94,.5),
+                    0 0 35px rgba(34,197,94,.4);
+        transform: scale(1);
     }
+}
 
-    .timer {
-        margin-top: 25px;
-        font-size: 20px;
-        font-weight: bold;
-    }
+/* BADGE */
+.siddharth-badge {
+    position: absolute;
+    top: -6px;
+    right: -12px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 900;
+    color: #000;
+}
 
-    .join {
-        margin-top: 15px;
-        font-size: 14px;
-    }
+/* TITLES */
+.siddharth-title {
+    font-size: 2em;
+    font-weight: 900;
+    color: #22c55e;
+    margin-top: 14px;
+}
 
-    footer {
-        margin-top: 35px;
-        font-size: 14px;
-    }
+.siddharth-subtitle {
+    font-size: .9em;
+    color: #86efac;
+    margin-bottom: 16px;
+}
 
-    footer a {
-        color: #007bff;
-        text-decoration: none;
-        font-weight: bold;
-    }
+/* ALERT */
+.siddharth-alert {
+    background: rgba(239,68,68,.25);
+    border: 2px solid rgba(239,68,68,.55);
+    border-radius: 14px;
+    padding: 12px;
+    margin-bottom: 22px;
+    font-size: .9em;
+}
 
-    .links {
-        margin-top: 20px;
-        font-size: 13px;
-    }
+/* STATS */
+.siddharth-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
 
-    .links a {
-        color: #007bff;
-        text-decoration: none;
-        margin: 0 5px;
-    }
+.siddharth-stat {
+    background: rgba(34,197,94,.12);
+    border: 2px solid rgba(34,197,94,.35);
+    border-radius: 16px;
+    padding: 14px 6px;
+    font-size: .75em;
+}
 
-    .disclaimer {
-        margin-top: 25px;
-        font-size: 12px;
-        color: #888;
-    }
+.siddharth-number {
+    display: block;
+    font-size: 1.3em;
+    font-weight: 900;
+    color: #22c55e;
+}
+
+/* BUTTON */
+.siddharth-btn {
+    display: block;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    padding: 16px;
+    border-radius: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.05em;
+    margin-bottom: 22px;
+    transition: .25s;
+}
+
+.siddharth-btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px rgba(34,197,94,.6);
+}
+
+/* FEATURES */
+.siddharth-features {
+    background: rgba(34,197,94,.07);
+    border: 2px solid rgba(34,197,94,.25);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 22px;
+}
+
+.siddharth-feature {
+    padding: 8px 0;
+    font-size: .9em;
+}
+
+/* WHATSAPP */
+.siddharth-whatsapp {
+    background: #25D366;
+    padding: 14px;
+    border-radius: 14px;
+    display: block;
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* DISCLAIMER */
+.siddharth-disclaimer {
+    font-size: .7em;
+    color: #aaaaaa;
+    margin-top: 22px;
+    border-top: 1px solid #1a1a1a;
+    padding-top: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .siddharth-logo { width: 100px; height: 100px; }
+    .siddharth-title { font-size: 1.75em; }
+}
 </style>
 </head>
 <!-- Meta Pixel Code -->
@@ -148,90 +224,62 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '875574845013846');
+fbq('init', '5394633364096155');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=875574845013846&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=5394633364096155&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <body>
 
-<img src="https://salmon-mandrill-935968.hostingersite.com/wp-content/uploads/2025/10/focus-forex-logo.jpg" class="logo" alt="Forex Focus">
+<div class="siddharth-wrapper">
+    <div class="siddharth-bg"></div>
 
-<h1>Learn how to Trade with <span>Forex Focus</span> - Expert</h1>
+    <div class="siddharth-container">
 
-<div class="subtitle">
-    Unlock the Secrets to Crypto & Forex Success
+        <div class="siddharth-hero">
+            <div class="siddharth-logo-box">
+                <img src="https://cdn5.telesco.pe/file/mYbnnueICgPXQSzZhbpR-wtJSdrH3ByBirq_ZJy9bnSV_2fFLIQvwKgUzSt-m9Nb-PBH5mIJzFjDWpV0gQDJWfhmMQKIfvvcAz1ptSVxOZ6wPvHU83iHfTDujsu5KhgMxoVOrSUAcIFYCDGfMX70Gc-X6gd1GIpqGz5GPCmujKFKh6KhowIN0dpdsEGl1mVLtaQHyq7BTcbqzAMPA74dZvMDdlgXItjmqeDsz0GVyOqpPco5Bg_PKyMndL4N9vgAmKW2uNnS6aSmHltIdn9bEHzLqGvSZIY_sRSOgaSc6s-a21mRzjmGIifFiCBM1M-qRX8L3iev6RCL_FhTmJdDkw.jpg"
+                     alt="Crypto by Siddharth"
+                     class="siddharth-logo">
+                <div class="siddharth-badge">Elite ⚡</div>
+            </div>
+
+            <h1 class="siddharth-title">CRYPTO BY SIDDHARTH</h1>
+            <p class="siddharth-subtitle">Premium Forex Education & Market Insights</p>
+        </div>
+
+        <div class="siddharth-alert">
+            🔥 Daily Forex Levels • Price Action • Market Structure
+        </div>
+
+        <div class="siddharth-stats">
+            <div class="siddharth-stat">📈 <span class="siddharth-number">99%</span> Accuracy</div>
+            <div class="siddharth-stat">👥 <span class="siddharth-number">85K+</span> Learners</div>
+            <div class="siddharth-stat">⚡ <span class="siddharth-number">24/7</span> Updates</div>
+        </div>
+
+        <a href="https://t.me/+u9Fsr57JzbI3NzI1" class="siddharth-btn">
+            📊 Join Free Forex Education Channel
+        </a>
+
+        <div class="siddharth-features">
+            <div class="siddharth-feature">🎯 Daily Forex Levels</div>
+            <div class="siddharth-feature">📊 Market Structure</div>
+            <div class="siddharth-feature">⚡ Price Action Training</div>
+        </div>
+
+        <a href="https://wa.link/zr8bdk" class="siddharth-whatsapp">
+            💬 Ads Maintained by MetaMind
+        </a>
+
+        <p class="siddharth-disclaimer">
+            Disclaimer: Educational purpose only. Not financial advice.
+        </p>
+
+    </div>
 </div>
-
-<div class="subscribers">
-    5,555 Subscribers
-</div>
-
-<div class="desc">
-    The Best Crypto and Forex Signals For Educational Use Only.
-</div>
-<div class="small">
-    No financial advice • Market risk involved
-</div>
-
-<!-- Buttons -->
-<a href="https://t.me/+yviLthSH-4U5MDhl" class="btn">
-    View In Telegram
-</a>
-
-<a href="https://affs.click/TNCK1" class="btn secondary" target="_blank">
-    🚀 Open New Account in XM
-</a>
-
-<a href="https://t.me/frxfocus" class="btn info">
-    ℹ️ More Information
-</a>
-
-<div class="timer" id="timer">02 : 00</div>
-
-<div class="join">
-    If you have <b>Telegram</b>, you can join instantly
-</div>
-
-<footer>
-    Ads Maintained By 
-    <a href="https://t.me/+yviLthSH-4U5MDhl" target="_blank">
-        Metamind Digital Agency
-    </a>
-</footer>
-
-<div class="links">
-    <a href="https://t.me/+yviLthSH-4U5MDhl">Privacy Policy</a> •
-    <a href="https://t.me/+yviLthSH-4U5MDhl">Disclaimer</a> •
-    <a href="https://t.me/+yviLthSH-4U5MDhl">Terms</a>
-</div>
-
-<div class="disclaimer">
-    This site is not a part of the Facebook™ website or Facebook Inc.  
-    This site is NOT endorsed by Facebook™ in any way.
-</div>
-
-<script>
-    let time = 120;
-    const timerElement = document.getElementById("timer");
-
-    const countdown = setInterval(() => {
-        let minutes = Math.floor(time / 60);
-        let seconds = time % 60;
-
-        timerElement.innerHTML =
-            `${minutes.toString().padStart(2,'0')} : ${seconds.toString().padStart(2,'0')}`;
-
-        time--;
-
-        if (time < 0) {
-            clearInterval(countdown);
-            window.location.href = "https://t.me/+yviLthSH-4U5MDhl";
-        }
-    }, 1000);
-</script>
 
 </body>
 </html>
